@@ -9,7 +9,7 @@ if (process.argv.length === 2) {
 let string = ''
 
 for (let i = 2 ; i < process.argv.length ; ++i) {
-  string += `${process.argv[i]}`
+  string += (`${process.argv[i]} `)
 }
 
 console.log(chalk.green(string))
