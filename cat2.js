@@ -17,7 +17,7 @@ if (process.argv.length !== 5) {
   process.exit(1)
 }
 
-// vérifier que chaque élément saisi soit bien un fichier
+// vérifier que le fichier existe
 
 for (i = 2; i < process.argv.length; ++i) {
   if (!fs.existsSync) {
