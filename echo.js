@@ -1,6 +1,5 @@
 const chalk = require('chalk')
 
-console.log('commande echo')
 
 if (process.argv.length === 2) {
   console.log(chalk.red('utilisateur : veuillez saisir plus d informations'))
