@@ -8,19 +8,27 @@ Gestion de l'erreur si l'un des fichiers à afficher n'existe pas.*/
 
 const readlineSync = require('readline-sync')
 const chalk = require('chalk')
-const fs = require('fs')                          // employer un switch / case
+const fs = require('fs')                        
 
-/*
+// vérification du  nombre d'arguments saisis en ligne de commande
+
 if (process.argv.length !== 5) {
   console.log(chalk.red('Utilisateur : node cp.js argument-1 argument-2 argument-3'))
   process.exit(1)
 }
-if (!fs.existsSync(process.argv[2] || process.argv[3] || process.argv[3])) {
+
+// vérifier que chaque élément saisi soit bien un fichier
+
+for (i = 2; i < process.argv.length; ++i) {
+  if (!fs.existsSync) {
   console.log(chalk.red(`Erreur : ${process.argv[i]} n'existe pas!`))
   process.exit(1)
-}*/
+ }
 
 
-let reading = fs.readFileSync('./file2.txt', 'utf-8')
+// code principal
+
+let reading = fs.readFileSync(process.argv[i], 'utf-8')
 
 console.log(reading)
+}
